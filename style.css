@@ -85,3 +85,18 @@ footer p { margin: 6px 0; }
   .hero { padding-top: 32px; }
   h2 { font-size: 28px; }
 }
+
+/* Ports page */
+nav a.here { color: var(--accent); }
+.ports-hero { text-align: center; }
+.ports { display: grid; gap: 24px; }
+.port { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; }
+.port-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.port h2 { margin: 0; font-size: 28px; }
+.port .small { margin: 4px 0 0; }
+.port ul { color: var(--dim); font-size: 17px; margin: 18px 0 22px; padding-left: 20px; }
+.port li { margin: 6px 0; }
+.tier { font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; border-radius: 999px; padding: 4px 12px; border: 1px solid; }
+.tier.alpha { color: #f2c14e; border-color: #f2c14e88; }
+.tier.beta { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.ports-common { margin-top: 24px; }
