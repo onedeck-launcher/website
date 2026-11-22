@@ -92,7 +92,15 @@ footer p { margin: 6px 0; }
 nav a.here { color: var(--accent); }
 .ports-hero { text-align: center; }
 .ports { display: grid; gap: 24px; }
-.port { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; }
+.port { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.port-body { padding: 24px 32px 28px; }
+.port-art { position: relative; aspect-ratio: 3 / 1; background: #05080d; }
+.port-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.port-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, var(--card) 0%, rgba(16,35,58,.35) 45%, transparent 75%); }
+.port-art .port-logo { position: absolute; z-index: 1; left: 28px; bottom: 16px; width: auto; height: auto; max-width: 42%; max-height: 62%; object-fit: contain; filter: drop-shadow(0 4px 14px rgba(0,0,0,.7)); }
+.port-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.portVer { margin: 10px 0 0 !important; }
+@media (max-width: 600px) { .port-body { padding: 20px; } .port-art .port-logo { left: 16px; max-width: 60%; } }
 .port-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
 .port h2 { margin: 0; font-size: 28px; }
 .port .small { margin: 4px 0 0; }

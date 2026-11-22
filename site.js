@@ -27,3 +27,7 @@ async function downloads() {
   for (const p of all('.dlNote')) p.innerHTML = 'Windows and Linux supported. Free and open source. <a href="https://github.com/onedeck-launcher">Follow on GitHub</a>';
 }
 downloads();
+
+// Ports page: each port's current version under its Download button.
+for (const p of all('.portVer')) fetch(`https://api.github.com/repos/${p.dataset.repo}/releases/latest`)
+  .then(r => r.ok ? r.json() : null).then(rel => { if (rel?.tag_name) p.textContent = `Version ${rel.tag_name.replace(/^v/, '')} for Windows. Bring your own copy of the game.`; }).catch(() => {});
