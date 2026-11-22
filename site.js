@@ -17,6 +17,8 @@ async function downloads() {
       for (const a of all('.dlMain')) { a.href = first.browser_download_url; a.textContent = `Download for ${label(first)}`; }
       for (const a of all('.dlOther')) { if (second) { a.href = second.browser_download_url; a.textContent = label(second); a.hidden = false; } }
       for (const p of all('.dlNote')) p.textContent = `Version ${rel.tag_name.replace(/^v/, '')}. Free and open source. No account, no tracking.`;
+      // On Linux before there's an AppImage: say it's on its way (the button gives the Windows one).
+      if (isLinux && !lin) for (const p of all('.dlNote')) p.textContent = `Version ${rel.tag_name.replace(/^v/, '')} is out for Windows. The Linux version is coming soon.`;
       return;
     } catch {}
   }
