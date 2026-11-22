@@ -22,6 +22,6 @@ async function downloads() {
   }
   // No OneDeck release yet.
   for (const a of all('.dlMain')) { a.textContent = 'Coming soon'; a.classList.add('off'); }
-  for (const p of all('.dlNote')) p.innerHTML = 'Windows and Linux. Free and open source. <a href="https://github.com/onedeck-launcher">Follow on GitHub</a>';
+  for (const p of all('.dlNote')) p.innerHTML = 'Windows and Linux supported. Free and open source. <a href="https://github.com/onedeck-launcher">Follow on GitHub</a>';
 }
 downloads();
